@@ -11,3 +11,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.NavLink{
+  color: black;
+}
+
+.NavLink:hover{
+  color: #4E89E3;
+}
+
+.ActiveNav {
+  color:#4E89E3;
+};
