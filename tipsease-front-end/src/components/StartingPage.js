@@ -11,6 +11,7 @@ export default function StartingPage(){
 
         <h1>Are you ready to experience a brand new tipping revolution?</h1>
         <NavLink to="/login"><button className="ui button">Login</button></NavLink>
+        <NavLink to="/sign_up"><button className="ui button">Sign Up</button></NavLink>
 
         </>
     )
