@@ -2,6 +2,8 @@ import React from 'react';
 import {NavLink} from 'react-router-dom';
 import axios from "axios";
 
+import './SignUp.css';
+
 export default class SignUpForm extends React.Component{
     state= {
         fullName: "",
@@ -49,9 +51,8 @@ export default class SignUpForm extends React.Component{
 
     return(
         <div>
-            <form onSubmit={this.handleSubmit}>
+            <form className="signupform" onSubmit={this.handleSubmit}>
 
-            <label htmlFor="fullName">Full Name</label>
             <input
                 type="text"
                 name="fullName"
@@ -59,7 +60,6 @@ export default class SignUpForm extends React.Component{
                 onChange={this.changeHandler}
             />
 
-            <label htmlFor="serviceType">Service Type</label>
             <input
                 type="text"
                 name="serviceType"
@@ -67,7 +67,6 @@ export default class SignUpForm extends React.Component{
                 onChange={this.changeHandler}
             />
 
-            <label htmlFor="workplace">Workplace</label>
             <input
                 type="text"
                 name="workplace"
@@ -75,7 +74,6 @@ export default class SignUpForm extends React.Component{
                 onChange={this.changeHandler}
             />
 
-            <label htmlFor="timeAtJob">Time At Job</label>
             <input
                 type="number"
                 name="timeAtJob"
@@ -83,7 +81,6 @@ export default class SignUpForm extends React.Component{
                 onChange={this.changeHandler}
             />
 
-            <label htmlFor="tagline">$Cashtag</label>
             <input
                 type="text"
                 name="tagline"
@@ -91,14 +88,12 @@ export default class SignUpForm extends React.Component{
                 onChange={this.changeHandler}
             />
 
-            <label htmlFor="bio">Bio</label>
             <textarea
                 name="bio"
                 placeholder="Tell something about yourself"
                 onChange={this.changeHandler}
             />
 
-            <label htmlFor="username">Username</label>
             <input
                 type="text"
                 name="username"
@@ -106,7 +101,6 @@ export default class SignUpForm extends React.Component{
                 onChange={this.changeHandler}
             />
 
-            <label htmlFor="password">Password</label>
             <input
                 type="password"
                 name="password"
@@ -117,8 +111,11 @@ export default class SignUpForm extends React.Component{
 
             <button type="submit">Submit!</button>
             </form>
+
+            <div className="signupform">
             <h3>Already have account?</h3>
             <NavLink to="/login"><button>Login</button></NavLink>
+            </div>
         </div>
     )
 }}
