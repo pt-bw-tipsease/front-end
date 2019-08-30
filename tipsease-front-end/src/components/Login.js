@@ -1,24 +1,55 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import Axios from 'axios';
 
-export default function Login(){
+import { Form } from 'semantic-ui-react';
+
+export default function Login(props){
+    console.log(props);
+    const [login, setLogin] = useState({ email: "", password: ""});
+
+    useEffect(() => {
+        Axios.get(``)
+            .then(res => {
+
+            })
+            .catch(error => {
+                console.log(error)
+            })
+    })
+
+    const changeHandler = event => {
+        setLogin({ ...login, [event.target.username]: event.target.value });
+    };
+
+    const submitForm = event => {
+        event.preventDefault();
+
+    }
+
     return (
-        <div>
-        <h2>Login</h2>
-        <form>
-            <label htmlFor="email"> Email</label>
-            <input
+        <div className="login">
+
+        <Form className="loginform" onSubmit={submitForm}>
+            <Form.Group className="logingroup">
+ 
+            <Form.Input className="logingroup" 
                 type="email"
                 name="email"
-                placeholder="email"
+                placeholder="Email"
+                onChange={changeHandler}
             />
 
-            <label htmlFor="password">Password</label>
-            <input
+            <Form.Input className="logingroup"
                 type="password"
                 name="password"
-                placeholder="password"
+                placeholder="Password"
+                onChange={changeHandler}
             />
-        </form>
+
+            <Form.Button type="submit">Login</Form.Button>
+            </Form.Group>
+        </Form>
         </div>
     )
 }
+
