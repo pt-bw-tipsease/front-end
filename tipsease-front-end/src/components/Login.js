@@ -8,9 +8,10 @@ export default function Login(props){
     const [login, setLogin] = useState({ email: "", password: ""});
 
     useEffect(() => {
-        Axios.get(``)
+        Axios.get(`https://vr-overlord-server.herokuapp.com/serviceWorkers`)
             .then(res => {
-
+                console.log(res.data)
+                setLogin(res.data)
             })
             .catch(error => {
                 console.log(error)

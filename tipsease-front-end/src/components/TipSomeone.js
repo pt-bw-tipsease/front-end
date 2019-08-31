@@ -23,7 +23,14 @@ export default function TipSomeone(){
             <h2>{serviceWorker.map(props => {
                 return <ServiceWorkerCard
                     photoUrl={props.photoUrl}
+                    fullName={props.fullName}
                     key = {props.id}
+                    serviceType ={props.serviceType}
+                    workplace ={props.workplace}
+                    tagline ={props.tagline}
+                    bio={props.bio}
+                    numOfRatings={props.numOfRatings}
+                    rating={props.rating}
                 />
             })}</h2>
         </div>
