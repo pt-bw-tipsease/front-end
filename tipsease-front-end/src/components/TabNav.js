@@ -32,6 +32,7 @@ export default function TabNav(){
         <WrappedDiv>
         <WrappedNav><NavLink to="/login" className="NavLink" activeClassName="ActiveNav">Login</NavLink></WrappedNav>
         <WrappedNav><NavLink to="/sign_up" className="NavLink" activeClassName="ActiveNav">Sign Up</NavLink></WrappedNav>
+        <WrappedNav><NavLink to="/tipsomeone" className="NavLink" activeClassName="ActiveNav">Tip Someone</NavLink></WrappedNav>
         </WrappedDiv>
         </>
     )
