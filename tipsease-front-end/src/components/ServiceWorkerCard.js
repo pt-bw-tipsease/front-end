@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Image, Icon } from 'semantic-ui-react';
+import { Card, Image, Icon, Button } from 'semantic-ui-react';
 
 export default function ServiceWorkerCard({fullName, photoUrl, serviceType, workplace, tagline, bio, numOfRatings, rating}) {
     return(
@@ -34,6 +34,7 @@ export default function ServiceWorkerCard({fullName, photoUrl, serviceType, work
                 </a>
 
             </Card.Content>
+            <Button>Tip {fullName}!</Button>
         </Card.Content>
         </Card>
     )
